@@ -10,7 +10,7 @@ const user = {
     lastName: 'Test',
     phone: '17775551122',
     email,
-    password: 'abc123',
+    password: 'abc123'
 }
 
 export {text, user};

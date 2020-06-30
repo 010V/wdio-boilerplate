@@ -1,19 +1,18 @@
 import BasePage from "./BasePage";
 
-class RegisterPage extends BasePage{
-
-    get header() {return $('h1')}
-    get paragraph() {return $('p')}
-    get firstNameField() {return $('[name="firstName"]')}
-    get lastNameField() {return $('[name="firstName"]')}
-    get phoneField() {return $('[name="phone"]')}
-    get emailField() {return $('[name="email"]')}
-    get passwordField() {return $('[name="password"]')}
-    get submitBtn() {return $('[type="submit"]')}
+class RegisterPage extends BasePage {
+    get header() { return $('h1') }
+    get paragraph() { return $('p') }
+    get firstNameField() { return $('[name="firstName"]') }
+    get lastNameField() { return $('[name="lastName"]') }
+    get phoneField() { return $('[name="phone"]') }
+    get emailField() { return $('[name="email"]') }
+    get passwordField() { return $('[name="password"]') }
+    get submitBtn() { return $('button[type="submit"]') }
 
     submitForm(){
         if(this.submitBtn.isClickable()) {
-            this.submitBtn.click()
+            this.submitBtn.click();
         }
     }
 
@@ -21,7 +20,7 @@ class RegisterPage extends BasePage{
         super.open('/user/register');
     }
 
-    registerNewUser(user) {
+    registerNewUser(user){
         this.open();
         this.firstNameField.setValue(user.firstName);
         this.lastNameField.setValue(user.lastName);
